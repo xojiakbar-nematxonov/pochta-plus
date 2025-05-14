@@ -1,103 +1,272 @@
-import Image from "next/image";
+import Image from "next/image"
+import HeroSection from "@/components/hero-section"
+import StatsSection from "@/components/stats-section"
+import TrackingSection from "@/components/tracking-section"
+import ServicesGrid from "@/components/services-grid"
+import OnlineServicesSection from "@/components/online-services-section"
+import FAQSection from "@/components/faq-section"
+import CTASection from "@/components/cta-section"
+import { FiSearch, FiGlobe, FiCreditCard, FiStar } from "react-icons/fi"
 
-export default function Home() {
+export default function HomePage() {
+  // Stats data
+  const stats = [
+    {
+      value: "100+",
+      label: "Mamlakatlar",
+    },
+    {
+      value: "24/7",
+      label: "Xizmat",
+    },
+    {
+      value: "1M+",
+      label: "Mijozlar",
+    },
+    {
+      value: "99%",
+      label: "Mamnuniyat",
+    },
+  ]
+
+  // Tracking features data
+  const trackingFeatures = [
+    {
+      number: "1",
+      title: "Jo'natmani kuzatish",
+      description: "Jo'natmalaringizni real vaqtda kuzating va joylashuvini aniqlang.",
+    },
+    {
+      number: "2",
+      title: "Xavfsiz yetkazib berish",
+      description: "Jo'natmalaringiz xavfsizligi va butunligi kafolatlanadi.",
+    },
+    {
+      number: "3",
+      title: "Tezkor xizmat",
+      description: "Eng qisqa vaqt ichida jo'natmalaringizni manzilga yetkazib beramiz.",
+    },
+  ]
+
+  // Online services steps data
+  const onlineServicesSteps = [
+    {
+      number: "01",
+      title: "Ro'yxatdan o'ting",
+      description: "Platformamizda ro'yxatdan o'ting va shaxsiy kabinetingizni yarating.",
+    },
+    {
+      number: "02",
+      title: "Jo'natmani ro'yxatga oling",
+      description: "Jo'natmangizni tizimda ro'yxatga oling va kuzatuv raqamini oling.",
+    },
+    {
+      number: "03",
+      title: "Kuzatib boring",
+      description: "Jo'natmangizni real vaqtda kuzatib boring va manzilga yetib borguncha nazorat qiling.",
+    },
+  ]
+
+  // Services data
+  const services = [
+    {
+      icon: <FiSearch className="w-6 h-6" />,
+      title: "Jo'natmalarni Kuzatish",
+      description: "Real vaqtda jo'natmalar holatini kuzatish imkoniyati.",
+    },
+    {
+      icon: <FiGlobe className="w-6 h-6" />,
+      title: "Xalqaro Jo'natmalar",
+      description: "Dunyo bo'ylab jo'natmalarni yetkazib berish xizmatlari.",
+    },
+    {
+      icon: <FiCreditCard className="w-6 h-6" />,
+      title: "Onlayn To'lovlar",
+      description: "Xizmatlar uchun qulay va tezkor to'lov tizimi.",
+    },
+  ]
+
+  // FAQ data
+  const faqs = [
+    {
+      question: "Jo'natmani qanday kuzatish mumkin?",
+      answer: "Jo'natmangizni kuzatish uchun kuzatuv raqamini kiritib, jo'natma holatini tekshirishingiz mumkin.",
+    },
+    {
+      question: "Xizmat narxlari qanday?",
+      answer:
+        "Xizmat narxlari jo'natma vazni, o'lchami va manzili asosida hisoblanadi. Batafsil ma'lumot uchun narxlar sahifasiga o'ting.",
+    },
+    {
+      question: "Jo'natmani qanday yuborish mumkin?",
+      answer:
+        "Jo'natmani yuborish uchun bizning ofisimizga tashrif buyuring yoki onlayn buyurtma bering. Kuryer xizmatimiz jo'natmangizni olib ketadi.",
+    },
+    {
+      question: "Qanday to'lov usullari mavjud?",
+      answer:
+        "Biz naqd pul, bank kartasi, onlayn to'lov tizimlari va bank o'tkazmalari orqali to'lovlarni qabul qilamiz.",
+    },
+  ]
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="min-h-screen">
+      {/* Hero Section */}
+      <HeroSection
+        title="Pochta Plus - Zamonaviy Pochta Xizmatlari"
+        description="Jo'natmalarni kuzatish, xalqaro pochta xizmatlari va onlayn to'lovlar - barchasi bir platformada"
+      >
+        <div className="flex flex-col items-center gap-8">
+          <StatsSection stats={stats} />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          {/* Tracking Form */}
+          <div className="w-full max-w-2xl bg-white/10 backdrop-blur-sm rounded-lg p-6 mt-8">
+            <h3 className="text-xl font-semibold mb-4 text-center">Jo'natmangizni kuzating</h3>
+            <form className="flex flex-col md:flex-row gap-4">
+              <input
+                type="text"
+                placeholder="Kuzatuv raqamini kiriting"
+                className="flex-1 px-4 py-3 rounded-md text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <button
+                type="submit"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium transition-colors flex items-center justify-center gap-2"
+              >
+                <FiSearch className="w-5 h-5" />
+                <span>Kuzatish</span>
+              </button>
+            </form>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+      </HeroSection>
+
+      {/* Services Overview */}
+      <ServicesGrid
+        title="Bizning Xizmatlarimiz"
+        description="Pochta Plus sizga zamonaviy va qulay pochta xizmatlarini taqdim etadi"
+        services={services}
+      />
+
+      {/* Tracking Section */}
+      <TrackingSection
+        title="Jo'natmalarni kuzatish xizmati"
+        description="Real vaqtda jo'natmalar holatini kuzatib boring va jo'natmalaringiz xavfsizligini ta'minlang."
+        features={trackingFeatures}
+        imageSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-olZ3dM1Bametv46ENWFXYh9SRbLATJ.png"
+      />
+
+      {/* Online Services Section */}
+      <OnlineServicesSection
+        title="Onlayn xizmatlardan foydalanish"
+        description="Pochta Plus platformasi orqali xizmatlardan foydalanish juda oson"
+        steps={onlineServicesSteps}
+        imageSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Fckk37CxgoP2RByTH7LGCe3TJ6LBoU.png"
+      />
+
+      {/* Testimonials Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-12 text-center">Mijozlarimiz fikrlari</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[1, 2, 3].map((item) => (
+              <div key={item} className="bg-gray-50 p-6 rounded-lg shadow-sm">
+                <div className="flex mb-4">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <FiStar key={star} className="w-5 h-5 text-yellow-500 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-700 mb-4">
+                  "Pochta Plus xizmatlari juda qulay va ishonchli. Jo'natmalarim har doim o'z vaqtida yetib keladi va
+                  men ularni real vaqtda kuzatib boraman."
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold">
+                    {item === 1 ? "A" : item === 2 ? "B" : "C"}
+                  </div>
+                  <div>
+                    <p className="font-medium">
+                      {item === 1 ? "Aziz Karimov" : item === 2 ? "Barno Saidova" : "Camol Rahimov"}
+                    </p>
+                    <p className="text-sm text-gray-600">
+                      {item === 1 ? "Tadbirkor" : item === 2 ? "Marketolog" : "Dasturchi"}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Partners Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-12 text-center">Bizning hamkorlarimiz</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {[1, 2, 3, 4].map((item) => (
+              <div key={item} className="flex items-center justify-center">
+                <div className="w-32 h-32 bg-white rounded-lg shadow-sm flex items-center justify-center">
+                  <div className="text-3xl font-bold text-blue-600">Logo {item}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <FAQSection
+        title="Ko'p so'raladigan savollar"
+        faqs={faqs}
+        ctaText="Boshqa savollaringiz bormi?"
+        ctaButtonText="Biz bilan bog'laning"
+      />
+
+      {/* Mobile App Section */}
+      <section className="py-16 bg-blue-950 text-white">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <h2 className="text-3xl font-bold">Mobil ilovamizni yuklab oling</h2>
+              <p className="text-lg">
+                Pochta Plus mobil ilovasi orqali jo'natmalaringizni kuzating, to'lovlarni amalga oshiring va barcha
+                xizmatlardan foydalaning.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <a href="#" className="inline-block">
+                  <Image
+                    src="/placeholder.svg?height=50&width=150"
+                    alt="App Store"
+                    width={150}
+                    height={50}
+                    className="rounded-lg"
+                  />
+                </a>
+                <a href="#" className="inline-block">
+                  <Image
+                    src="/placeholder.svg?height=50&width=150"
+                    alt="Google Play"
+                    width={150}
+                    height={50}
+                    className="rounded-lg"
+                  />
+                </a>
+              </div>
+            </div>
+            <div className="relative h-[500px]">
+              <Image src="/placeholder.svg?height=500&width=300" alt="Mobile App" fill className="object-contain" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <CTASection
+        title="Bizning xizmatlardan foydalaning"
+        description="Pochta Plus platformasi orqali jo'natmalarni kuzatish, xalqaro pochta xizmatlari va onlayn to'lovlar - barchasi bir platformada"
+        primaryButtonText="Boshlash"
+        secondaryButtonText="Batafsil ma'lumot"
+      />
+    </main>
+  )
 }
