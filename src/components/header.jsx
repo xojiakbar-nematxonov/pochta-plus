@@ -2,7 +2,11 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { FiMenu, FiX, FiHome, FiPackage, FiInfo, FiPhone, FiLogIn, FiUserPlus } from "react-icons/fi"
+import { FaLocationDot } from "react-icons/fa6";
+import { MdOutlineShoppingCart } from "react-icons/md";
+import { MdOutlinePayments } from "react-icons/md";
+
+import { FiMenu, FiX, FiHome, FiPackage, FiInfo, FiPhone, FiLogIn, FiUserPlus  } from "react-icons/fi"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -18,9 +22,9 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <div className="w-10 h-10 bg-blue-600 rounded-md flex items-center justify-center text-white font-bold mr-2">
-              PP
+              SP
             </div>
-            <span className="text-xl font-bold">Pochta Plus</span>
+            <span className="text-xl font-bold">Smart Post</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -33,14 +37,28 @@ export default function Header() {
               <FiPackage className="w-4 h-4" />
               <span>Xizmatlar</span>
             </Link>
+             <Link href="/spmp" className="text-gray-700 hover:text-blue-600 font-medium flex items-center gap-1">
+              <MdOutlineShoppingCart className="w-4 h-4" />
+              <span>SPMP</span>
+            </Link>
+             <Link href="/payments" className="text-gray-700 hover:text-blue-600 font-medium flex items-center gap-1">
+              <MdOutlinePayments className="w-4 h-4" />
+              <span>To'lovlar</span>
+            </Link>
+             <Link href="/adress" className="text-gray-700 hover:text-blue-600 font-medium flex items-center gap-1">
+              <FaLocationDot className="w-4 h-4" />
+              <span>Filiallar</span>
+            </Link>
+           
             <Link href="/about" className="text-gray-700 hover:text-blue-600 font-medium flex items-center gap-1">
               <FiInfo className="w-4 h-4" />
               <span>Biz haqimizda</span>
             </Link>
-            <Link href="/contact" className="text-gray-700 hover:text-blue-600 font-medium flex items-center gap-1">
+            <Link href="/contacts" className="text-gray-700 hover:text-blue-600 font-medium flex items-center gap-1">
               <FiPhone className="w-4 h-4" />
               <span>Bog'lanish</span>
             </Link>
+           
           </nav>
 
           {/* Auth Buttons */}

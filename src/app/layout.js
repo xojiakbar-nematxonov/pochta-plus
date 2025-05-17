@@ -6,7 +6,7 @@ import Footer from "@/components/footer"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "Pochta Plus - Zamonaviy Pochta Xizmatlari",
+  title: "Smart post - Zamonaviy Pochta Xizmatlari",
   description: "Jo'natmalarni kuzatish, xalqaro pochta xizmatlari va onlayn to'lovlar - barchasi bir platformada",
 }
 

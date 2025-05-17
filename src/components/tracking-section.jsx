@@ -48,7 +48,7 @@ export default function TrackingSection({ title, description, features, imageSrc
           </div>
           <div className="relative h-[400px] rounded-lg overflow-hidden">
             <img
-              src={imageSrc || "/placeholder.svg?height=400&width=600"}
+              src={"uzpost1.jpg" || "/placeholder.svg?height=400&width=600"}
               alt="Delivery tracking service"
               className="object-cover"
             />

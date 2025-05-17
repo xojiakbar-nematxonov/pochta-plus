@@ -153,7 +153,7 @@ export default function AboutPage() {
             <div className="text-blue-600 font-medium mb-2">Sifatli xizmatlar va innovatsion yechimlar</div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Biz haqimizda</h1>
             <p className="text-gray-700 text-lg">
-              Pochta Plus platformasi pochta xizmatlarini zamonaviy va qulay shaklda taqdim etadi. Bizning maqsadimiz -
+              Smart Post platformasi pochta xizmatlarini zamonaviy va qulay shaklda taqdim etadi. Bizning maqsadimiz -
               xalqaro va mahalliy jo'natmalarni kuzatish, to'lovlarni osonlashtirish va foydalanuvchilar uchun eng
               yaxshi xizmatlarni yaratish.
             </p>
@@ -164,7 +164,7 @@ export default function AboutPage() {
       {/* Connect With Us Section */}
       <SocialConnectSection
         title="Biz bilan bog'laning"
-        description="Pochta Plus platformasi orqali siz biz bilan aloqada bo'lishingiz, savollaringizni berishingiz va hamkorlik imkoniyatlarini muhokama qilishingiz mumkin."
+        description="Smart Post platformasi orqali siz biz bilan aloqada bo'lishingiz, savollaringizni berishingiz va hamkorlik imkoniyatlarini muhokama qilishingiz mumkin."
         socialLinks={socialLinks}
       >
         <div className="bg-white p-6 rounded-lg shadow-sm">
@@ -240,7 +240,7 @@ export default function AboutPage() {
       {/* Our Values Section */}
       <ValuesSection
         title="Bizning qadriyatlarimiz"
-        description="Pochta Plus jamoasi sifat, ishonchlilik va mijozlarga qulaylikni birinchi o'ringa qo'yadi. Bizning xizmatlarimiz orqali jo'natmalarni kuzatish va to'lovlarni amalga oshirish yanada osonlashadi."
+        description="Smart Post jamoasi sifat, ishonchlilik va mijozlarga qulaylikni birinchi o'ringa qo'yadi. Bizning xizmatlarimiz orqali jo'natmalarni kuzatish va to'lovlarni amalga oshirish yanada osonlashadi."
         values={values}
         imageSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-juooJireNDrnqM68qqWCdHElgrQffP.png"
         extraTitle="Oson va qulay xizmatlar"
@@ -250,7 +250,7 @@ export default function AboutPage() {
       {/* Our Team Section */}
       <TeamSection
         title="Bizning jamoamiz Mutaxassislar"
-        description="Pochta Plus jamoasi - bu tajribali mutaxassislar va innovatsion fikrlovchilar. Ular sizga eng yaxshi xizmatlarni taqdim etishga tayyor."
+        description="Smart Post jamoasi - bu tajribali mutaxassislar va innovatsion fikrlovchilar. Ular sizga eng yaxshi xizmatlarni taqdim etishga tayyor."
         members={teamMembers}
         buttonText="Jamoamizni ko'ring"
       />

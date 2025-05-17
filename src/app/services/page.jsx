@@ -125,12 +125,12 @@ export default function ServicesPage() {
     {
       title: "Xalqaro Jo'natmalar",
       description: "Dunyo bo'ylab jo'natmalarni ishonchli va tez yetkazib berish.",
-      imageSrc: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-e85rRBWzBd11BdGyXPxrlA4J3YZMfo.png",
+      imageSrc: "ips.jpg",
     },
     {
       title: "Mahalliy Yetkazib Berish",
       description: "Hududiy jo'natmalar uchun tezkor xizmatlar.",
-      imageSrc: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-e85rRBWzBd11BdGyXPxrlA4J3YZMfo.png",
+      imageSrc: "nps.png",
     },
   ]
 
@@ -160,7 +160,7 @@ export default function ServicesPage() {
       {/* Hero Section */}
       <HeroSection
         title="Xizmatlarimizga xush kelibsiz"
-        description="Pochta Plus platformasi orqali jo'natmalar kuzatish, xalqaro jo'natmalar va onlayn to'lovlar xizmatlaridan foydalaning."
+        description="Smart Post platformasi orqali jo'natmalar kuzatish, xalqaro jo'natmalar va onlayn to'lovlar xizmatlaridan foydalaning."
       >
         <StatsSection stats={stats} />
       </HeroSection>
@@ -176,7 +176,7 @@ export default function ServicesPage() {
       {/* Online Services Section */}
       <OnlineServicesSection
         title="Onlayn to'lov va xizmatlardan foydalanish jarayoni"
-        description="Pochta Plus orqali xizmatlardan foydalanish juda oson. Quyidagi bosqichlarni bajaring:"
+        description="Smart Post orqali xizmatlardan foydalanish juda oson. Quyidagi bosqichlarni bajaring:"
         steps={onlineServicesSteps}
         imageSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Fckk37CxgoP2RByTH7LGCe3TJ6LBoU.png"
       />
@@ -184,7 +184,7 @@ export default function ServicesPage() {
       {/* Our Services Section */}
       <ServicesGrid
         title="Bizning xizmatlarimiz"
-        description="Pochta Plus sizga pochta va logistika sohasida eng yaxshi xizmatlarni taqdim etadi. Bizning malakali jamoamiz quyidagi xizmatlarni taqdim etadi."
+        description="Smart Post sizga pochta va logistika sohasida eng yaxshi xizmatlarni taqdim etadi. Bizning malakali jamoamiz quyidagi xizmatlarni taqdim etadi."
         services={services}
       />
 
@@ -196,7 +196,7 @@ export default function ServicesPage() {
       />
 
       {/* Delivery Types Section */}
-      <DeliveryTypesSection deliveryTypes={deliveryTypes} />
+      <DeliveryTypesSection deliveryTypes={deliveryTypes}  />
 
       {/* Service Areas Section */}
       <section className="py-16 bg-gray-50">
@@ -205,7 +205,7 @@ export default function ServicesPage() {
             <div className="space-y-4">
               <h2 className="text-3xl font-bold">Bizning xizmat hududlarimiz</h2>
               <p className="text-gray-600">
-                Pochta Plus xalqaro va mahalliy hududlarda xizmat ko'rsatadi. Bizning Toshkent ofisimiz orqali
+                Smart Post xalqaro va mahalliy hududlarda xizmat ko'rsatadi. Bizning Toshkent ofisimiz orqali
                 xizmatlardan foydalaning.
               </p>
               <div className="flex items-center gap-2">
@@ -215,10 +215,10 @@ export default function ServicesPage() {
             </div>
             <div className="relative h-[300px] rounded-lg overflow-hidden">
               <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-pzURjFma2OiRRshr4y7XlP3abH5wDX.png"
+                src="nps.png"
                 alt="Service areas map"
                 
-                className="object-cover"
+                className="w-[500px] h-auto"
               />
             </div>
           </div>

@@ -33,10 +33,10 @@ export default function OnlineServicesSection({ title, description, steps, image
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative h-[300px] rounded-lg overflow-hidden">
             <img
-              src={imageSrc || "/placeholder.svg?height=300&width=500"}
+              src={"os.jpg" || "/placeholder.svg?height=300&width=500"}
               alt="Online services"
               
-              className="object-cover"
+              className="object-contain"
             />
           </div>
           <div className="space-y-6">

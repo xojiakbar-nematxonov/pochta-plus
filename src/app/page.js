@@ -6,6 +6,9 @@ import ServicesGrid from "@/components/services-grid"
 import OnlineServicesSection from "@/components/online-services-section"
 import FAQSection from "@/components/faq-section"
 import CTASection from "@/components/cta-section"
+import { FaGooglePlay } from "react-icons/fa";
+import { FaAppStoreIos } from "react-icons/fa";
+
 import { FiSearch, FiGlobe, FiCreditCard, FiStar } from "react-icons/fi"
 
 export default function HomePage() {
@@ -113,20 +116,20 @@ export default function HomePage() {
     <main className="min-h-screen">
       {/* Hero Section */}
       <HeroSection
-        title="Pochta Plus - Zamonaviy Pochta Xizmatlari"
+        title="Smart Post - Zamonaviy Pochta Xizmatlari"
         description="Jo'natmalarni kuzatish, xalqaro pochta xizmatlari va onlayn to'lovlar - barchasi bir platformada"
       >
         <div className="flex flex-col items-center gap-8">
           <StatsSection stats={stats} />
 
           {/* Tracking Form */}
-          <div className="w-full max-w-2xl bg-white/10 backdrop-blur-sm rounded-lg p-6 mt-8">
+          <div className="w-full max-w-2xl bg-white/30 backdrop-blur-sm rounded-lg p-6 mt-8">
             <h3 className="text-xl font-semibold mb-4 text-center">Jo'natmangizni kuzating</h3>
             <form className="flex flex-col md:flex-row gap-4">
               <input
                 type="text"
                 placeholder="Kuzatuv raqamini kiriting"
-                className="flex-1 px-4 py-3 rounded-md text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="flex-1 px-4 py-3 rounded-md bg-white text-gray-900  focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
               <button
                 type="submit"
@@ -143,7 +146,7 @@ export default function HomePage() {
       {/* Services Overview */}
       <ServicesGrid
         title="Bizning Xizmatlarimiz"
-        description="Pochta Plus sizga zamonaviy va qulay pochta xizmatlarini taqdim etadi"
+        description="Smart Post sizga zamonaviy va qulay pochta xizmatlarini taqdim etadi"
         services={services}
       />
 
@@ -158,7 +161,7 @@ export default function HomePage() {
       {/* Online Services Section */}
       <OnlineServicesSection
         title="Onlayn xizmatlardan foydalanish"
-        description="Pochta Plus platformasi orqali xizmatlardan foydalanish juda oson"
+        description="Smart Post platformasi orqali xizmatlardan foydalanish juda oson"
         steps={onlineServicesSteps}
         imageSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Fckk37CxgoP2RByTH7LGCe3TJ6LBoU.png"
       />
@@ -176,7 +179,7 @@ export default function HomePage() {
                   ))}
                 </div>
                 <p className="text-gray-700 mb-4">
-                  "Pochta Plus xizmatlari juda qulay va ishonchli. Jo'natmalarim har doim o'z vaqtida yetib keladi va
+                  "Smart Post xizmatlari juda qulay va ishonchli. Jo'natmalarim har doim o'z vaqtida yetib keladi va
                   men ularni real vaqtda kuzatib boraman."
                 </p>
                 <div className="flex items-center gap-3">
@@ -223,38 +226,29 @@ export default function HomePage() {
       />
 
       {/* Mobile App Section */}
-      <section className="py-16 bg-blue-950 text-white">
+      <section className="py-12 bg-blue-950 text-white">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="space-y-6">
               <h2 className="text-3xl font-bold">Mobil ilovamizni yuklab oling</h2>
               <p className="text-lg">
-                Pochta Plus mobil ilovasi orqali jo'natmalaringizni kuzating, to'lovlarni amalga oshiring va barcha
+                Smart Post mobil ilovasi orqali jo'natmalaringizni kuzating, to'lovlarni amalga oshiring va barcha
                 xizmatlardan foydalaning.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a href="#" className="inline-block">
-                  <Image
-                    src="/placeholder.svg?height=50&width=150"
-                    alt="App Store"
-                    width={150}
-                    height={50}
-                    className="rounded-lg"
-                  />
+                  <FaAppStoreIos className="text-5xl"/>
                 </a>
                 <a href="#" className="inline-block">
-                  <Image
-                    src="/placeholder.svg?height=50&width=150"
-                    alt="Google Play"
-                    width={150}
-                    height={50}
-                    className="rounded-lg"
-                  />
+                  <FaGooglePlay className="text-5xl"/>
                 </a>
               </div>
             </div>
-            <div className="relative h-[500px]">
-              <Image src="/placeholder.svg?height=500&width=300" alt="Mobile App" fill className="object-contain" />
+            <div className="relative flex h-[500px] justify-center items-center ">
+              <div className="w-20 h-20 bg-blue-600 text-4xl rounded-md flex items-center justify-center text-white font-bold mr-2">
+              SP
+            </div>
+            <span className="text-3xl font-bold">Smart Post</span>
             </div>
           </div>
         </div>
@@ -263,7 +257,7 @@ export default function HomePage() {
       {/* CTA Section */}
       <CTASection
         title="Bizning xizmatlardan foydalaning"
-        description="Pochta Plus platformasi orqali jo'natmalarni kuzatish, xalqaro pochta xizmatlari va onlayn to'lovlar - barchasi bir platformada"
+        description="Smart Postplatformasi orqali jo'natmalarni kuzatish, xalqaro pochta xizmatlari va onlayn to'lovlar - barchasi bir platformada"
         primaryButtonText="Boshlash"
         secondaryButtonText="Batafsil ma'lumot"
       />

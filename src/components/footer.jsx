@@ -11,9 +11,9 @@ export default function Footer() {
           <div>
             <div className="flex items-center mb-4">
               <div className="w-10 h-10 bg-blue-600 rounded-md flex items-center justify-center text-white font-bold mr-2">
-                PP
+                SP
               </div>
-              <span className="text-xl font-bold">Pochta Plus</span>
+              <span className="text-xl font-bold">Smart Post</span>
             </div>
             <p className="text-gray-400 mb-4">
               Zamonaviy pochta xizmatlari platformasi. Jo'natmalarni kuzatish, xalqaro pochta xizmatlari va onlayn
@@ -127,7 +127,7 @@ export default function Footer() {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              &copy; {new Date().getFullYear()} Pochta Plus. Barcha huquqlar himoyalangan.
+              &copy; {new Date().getFullYear()} Smart Post. Barcha huquqlar himoyalangan.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link href="/terms" className="text-gray-400 hover:text-white text-sm">
