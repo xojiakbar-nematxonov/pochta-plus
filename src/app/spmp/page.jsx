@@ -15,58 +15,58 @@ export default function MarketplacePage() {
 
   // International stores data
   const internationalStores = [
-    { name: "Amazon", logo: "/placeholder.svg?height=80&width=120" },
-    { name: "SHEIN", logo: "/placeholder.svg?height=80&width=120" },
-    { name: "AliExpress", logo: "/placeholder.svg?height=80&width=120" },
-    { name: "ZARA", logo: "/placeholder.svg?height=80&width=120" },
-    { name: "H&M", logo: "/placeholder.svg?height=80&width=120" },
-    { name: "eBay", logo: "/placeholder.svg?height=80&width=120" },
-    { name: "Taobao", logo: "/placeholder.svg?height=80&width=120" },
-    { name: "Trendyol", logo: "/placeholder.svg?height=80&width=120" },
+    { name: "Amazon", logo: "/eshop.png" },
+    { name: "SHEIN", logo: "/eshop.png" },
+    { name: "AliExpress", logo: "/eshop.png" },
+    { name: "ZARA", logo: "/eshop.png" },
+    { name: "H&M", logo: "/eshop.png" },
+    { name: "eBay", logo: "/eshop.png" },
+    { name: "Taobao", logo: "/eshop.png" },
+    { name: "Trendyol", logo: "/eshop.png" },
   ]
 
   // Local stores with x3 payment
   const localStoresX3 = [
     {
       name: "Yandex Market",
-      logo: "/placeholder.svg?height=100&width=180",
+      logo: "/eshop.png",
       bgColor: "bg-yellow-400",
     },
     {
       name: "Korzinka Go",
-      logo: "/placeholder.svg?height=100&width=180",
+      logo: "/eshop.png",
       bgColor: "bg-white",
     },
     {
       name: "Wildberries",
-      logo: "/placeholder.svg?height=100&width=180",
+      logo: "/eshop.png",
       bgColor: "bg-purple-600",
     },
     {
       name: "Ozon",
-      logo: "/placeholder.svg?height=100&width=180",
+      logo: "/eshop.png",
       bgColor: "bg-blue-600",
     },
   ]
 
   // Local online stores
   const localOnlineStores = [
-    { name: "Asaxiy", logo: "/placeholder.svg?height=80&width=120" },
-    { name: "Mediapark", logo: "/placeholder.svg?height=80&width=120" },
-    { name: "Yandex Go", logo: "/placeholder.svg?height=80&width=120" },
-    { name: "Uzum.uz", logo: "/placeholder.svg?height=80&width=120" },
-    { name: "Make up Store", logo: "/placeholder.svg?height=80&width=120" },
-    { name: "Shoptextile", logo: "/placeholder.svg?height=80&width=120" },
-    { name: "Beauty Box", logo: "/placeholder.svg?height=80&width=120" },
-    { name: "Tashkent Gullari", logo: "/placeholder.svg?height=80&width=120" },
+    { name: "Asaxiy", logo: "/eshop.png" },
+    { name: "Mediapark", logo: "/eshop.png" },
+    { name: "Yandex Go", logo: "/eshop.png" },
+    { name: "Uzum.uz", logo: "/eshop.png" },
+    { name: "Make up Store", logo: "/eshop.png" },
+    { name: "Shoptextile", logo: "/eshop.png" },
+    { name: "Beauty Box", logo: "/eshop.png" },
+    { name: "Tashkent Gullari", logo: "/eshop.png" },
   ]
 
   // Fashion brands
   const fashionBrands = [
-    { name: "H&M", logo: "/placeholder.svg?height=80&width=120" },
-    { name: "ZARA", logo: "/placeholder.svg?height=80&width=120" },
-    { name: "Calvin Klein", logo: "/placeholder.svg?height=80&width=120" },
-    { name: "Tommy Hilfiger", logo: "/placeholder.svg?height=80&width=120" },
+    { name: "H&M", logo: "/eshop.png" },
+    { name: "ZARA", logo: "/eshop.png" },
+    { name: "Calvin Klein", logo: "/eshop.png" },
+    { name: "Tommy Hilfiger", logo: "/eshop.png" },
   ]
 
   return (
@@ -166,7 +166,7 @@ export default function MarketplacePage() {
             <div className="flex justify-center">
               <div className="relative w-64 h-[400px]">
                 <Image
-                  src="/placeholder.svg?height=400&width=250"
+                  src="/spmcard.webp"
                   alt="SPM Card mobile app"
                   fill
                   className="object-contain"
@@ -232,8 +232,13 @@ export default function MarketplacePage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {internationalStores.slice(0, 8).map((store, index) => (
               <div key={index} className="bg-white rounded-lg shadow-md p-4 flex items-center justify-center h-24">
-                <Image src={store.logo || "/placeholder.svg"} alt={store.name} width={100} height={60} />
-              </div>
+                <Image
+                  src={store.logo }
+                  alt={store.name}
+                  width={100}
+                  height={60}
+                />            
+                  </div>
             ))}
           </div>
         </div>
@@ -289,7 +294,7 @@ export default function MarketplacePage() {
               <div key={index} className="relative group overflow-hidden rounded-lg">
                 <div className="h-64 bg-gray-200 relative">
                   <Image
-                    src={`/placeholder.svg?height=300&width=250&text=${brand.name}`}
+                    src={brand.logo || `/placeholder.svg?height=300&width=250&text=${brand.name}`}
                     alt={brand.name}
                     fill
                     className="object-cover"

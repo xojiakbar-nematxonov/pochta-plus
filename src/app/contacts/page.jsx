@@ -56,7 +56,7 @@ export default function ContactPage() {
           {/* Right Column - Contact Form */}
           <div className="bg-white p-6 rounded-md shadow-sm">
             <h2 className="text-xl font-bold text-blue-800 mb-6 pb-2 border-b">
-              Savol, murojaat yoki takliflarni yuborish
+             Murojaat yoki hamkorlik  uchun ariza yuborish
             </h2>
 
             <form className="space-y-6">

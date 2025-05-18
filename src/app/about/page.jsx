@@ -72,27 +72,26 @@ export default function AboutPage() {
     },
   ]
 
-  // Team members data
   const teamMembers = [
     {
       name: "Olimjon Karimov",
       role: "Rahbar",
-      imageSrc: "/placeholder.svg?height=320&width=280",
+      imageSrc: "/staff.png",
     },
     {
       name: "Dilnoza Ismoilova",
       role: "Marketing mutaxassisi",
-      imageSrc: "/placeholder.svg?height=320&width=280",
+      imageSrc: "/staff.png",
     },
     {
       name: "Shokirbek Abdullayev",
       role: "Texnik mutaxassis",
-      imageSrc: "/placeholder.svg?height=320&width=280",
+      imageSrc: "/staff.png",
     },
     {
       name: "Madina Ergasheva",
       role: "Mijozlar bilan aloqalar bo'limi",
-      imageSrc: "/placeholder.svg?height=320&width=280",
+      imageSrc: "/staff.png",
     },
   ]
 
@@ -230,12 +229,7 @@ export default function AboutPage() {
         </div>
       </SocialConnectSection>
 
-      {/* Our Locations Section */}
-      <LocationsGrid
-        title="Bizning manzillarimiz"
-        description="O'zbekiston bo'ylab ofislarimizni kashf eting va biz bilan bog'laning."
-        locations={locations}
-      />
+    
 
       {/* Our Values Section */}
       <ValuesSection

@@ -84,12 +84,12 @@ export default function PaymentServicesPage() {
 
   // Partners
   const partners = [
-    { name: "Visa", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "Mastercard", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "Humo", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "Uzcard", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "PayPal", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "Western Union", logo: "/placeholder.svg?height=60&width=120" },
+    { name: "Visa", logo: "/spmcard.webp" },
+    { name: "Mastercard", logo: "/spmcard.webp" },
+    { name: "Humo", logo: "/spmcard.webp" },
+    { name: "Uzcard", logo: "/spmcard.webp" },
+    { name: "PayPal", logo: "/spmcard.webp" },
+    { name: "Western Union", logo: "/spmcard.webp" },
   ]
 
   // FAQ items
@@ -137,7 +137,7 @@ export default function PaymentServicesPage() {
             <div className="flex justify-center">
               <div className="relative w-full h-[400px]">
                 <Image
-                  src="/placeholder.svg?height=400&width=500&text=Payment+Services"
+                  src="/payments.jpg"
                   alt="To'lov xizmatlari"
                   fill
                   className="object-contain"
@@ -206,7 +206,7 @@ export default function PaymentServicesPage() {
             </div>
             <div className="relative h-[300px] md:h-[400px]">
               <Image
-                src="/placeholder.svg?height=400&width=500&text=SPM+Card"
+                src="/spmcard.webp"
                 alt="SPM Card"
                 fill
                 className="object-contain"
