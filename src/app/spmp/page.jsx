@@ -285,32 +285,7 @@ export default function MarketplacePage() {
         </div>
       </section>
 
-      {/* Fashion Brands */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold mb-8 text-center">Zamonaviy obrazlar x12 to'lovda</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {fashionBrands.map((brand, index) => (
-              <div key={index} className="relative group overflow-hidden rounded-lg">
-                <div className="h-64 bg-gray-200 relative">
-                  <Image
-                    src={brand.logo || `/placeholder.svg?height=300&width=250&text=${brand.name}`}
-                    alt={brand.name}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                  <div className="flex items-center justify-between">
-                    <p className="text-white font-bold">{brand.name}</p>
-                    <span className="bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded">x12</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+    
 
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-blue-800 to-blue-600 text-white">

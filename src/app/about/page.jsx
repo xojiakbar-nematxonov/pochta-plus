@@ -5,7 +5,7 @@ import ValuesSection from "@/components/values-section"
 import TeamSection from "@/components/team-section"
 import ContactGrid from "@/components/contact-grid"
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa"
-import { FiChevronDown, FiStar } from "react-icons/fi"
+import {  FiUpload } from "react-icons/fi"
 
 export default function AboutPage() {
   // Social media icons
@@ -166,67 +166,87 @@ export default function AboutPage() {
         description="Smart Post platformasi orqali siz biz bilan aloqada bo'lishingiz, savollaringizni berishingiz va hamkorlik imkoniyatlarini muhokama qilishingiz mumkin."
         socialLinks={socialLinks}
       >
-        <div className="bg-white p-6 rounded-lg shadow-sm">
-          <h3 className="text-xl font-bold mb-4">Add Your Form in 3 Easy Steps</h3>
-          <div className="grid gap-6">
-            <div className="flex items-start gap-4">
-              <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center flex-shrink-0">
-                <span>1</span>
+        <div className="bg-white p-6 rounded-md shadow-sm">
+            <h2 className="text-xl font-bold text-blue-800 mb-6 pb-2 border-b">
+             Murojaat yoki hamkorlik  uchun ariza yuborish
+            </h2>
+
+            <form className="space-y-6">
+              <div className="grid md:grid-cols-3 gap-4">
+                {/* Applicant Name */}
+                <div className="md:col-span-1">
+                  <label className="block mb-1">
+                    Murojatchi <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Ismingizni kiriting"
+                    className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    required
+                  />
+                </div>
+
+                {/* Email */}
+                <div className="md:col-span-1">
+                  <label className="block mb-1">E-mail:</label>
+                  <input
+                    type="email"
+                    placeholder="Email manzilingizni kiriting"
+                    className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+
+                {/* Phone */}
+                <div className="md:col-span-1">
+                  <label className="block mb-1">
+                    Telefon raqami: <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="tel"
+                    placeholder="Telefon raqamingizni kiriting"
+                    className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    required
+                  />
+                </div>
               </div>
+
+              {/* File Upload */}
               <div>
-                <p className="font-medium">Choose a third-party form to embed.</p>
+                <label className="block mb-1">Fayl</label>
+                <div className="flex items-center gap-2">
+                  <label className="cursor-pointer flex items-center gap-2 border rounded-md px-3 py-1.5 bg-gray-50 hover:bg-gray-100">
+                    <FiUpload className="text-gray-600" />
+                    <span>Выберите файл</span>
+                    <input type="file" className="hidden" />
+                  </label>
+                  <span className="text-gray-500 text-sm">Файл не выбран</span>
+                </div>
               </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center flex-shrink-0">
-                <span>2</span>
-              </div>
+
+              {/* Message */}
               <div>
-                <p className="font-medium">Create and customize your form using the selected platform.</p>
+                <label className="block mb-1">
+                  Murojaat matni <span className="text-red-500">*</span>
+                </label>
+                <textarea
+                  rows="6"
+                  placeholder="Savol, murojaat yoki taklifni kiriting..."
+                  className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                ></textarea>
               </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center flex-shrink-0">
-                <span>3</span>
-              </div>
+
+              {/* Submit Button */}
               <div>
-                <p className="font-medium">Input the form link into the setting bar and click Confirm.</p>
+                <button
+                  type="submit"
+                  className="bg-blue-700 hover:bg-blue-800 text-white px-6 py-2 rounded-md font-medium transition-colors"
+                >
+                  Xabar Yuborish
+                </button>
               </div>
-            </div>
+            </form>
           </div>
-          <div className="mt-6">
-            <h4 className="font-medium mb-4">You can choose</h4>
-            <div className="grid grid-cols-3 gap-4">
-              <div className="p-4 border rounded-lg">
-                <div className="flex items-center gap-2 mb-2">
-                  <div className="w-6 h-6 bg-purple-100 rounded flex items-center justify-center">
-                    <span className="text-purple-600 text-sm">G</span>
-                  </div>
-                  <span className="font-medium">Google Forms</span>
-                </div>
-                <p className="text-xs text-gray-600">A powerful online form creator by Google.</p>
-              </div>
-              <div className="p-4 border rounded-lg">
-                <div className="flex items-center gap-2 mb-2">
-                  <div className="w-6 h-6 bg-blue-100 rounded flex items-center justify-center">
-                    <span className="text-blue-600 text-sm">T</span>
-                  </div>
-                  <span className="font-medium">Typeform</span>
-                </div>
-                <p className="text-xs text-gray-600">An interactive and stylish form builder.</p>
-              </div>
-              <div className="p-4 border rounded-lg">
-                <div className="flex items-center gap-2 mb-2">
-                  <div className="w-6 h-6 bg-green-100 rounded flex items-center justify-center">
-                    <span className="text-green-600 text-sm">O</span>
-                  </div>
-                  <span className="font-medium">Other</span>
-                </div>
-                <p className="text-xs text-gray-600">For other forms, use an embed code to add them.</p>
-              </div>
-            </div>
-          </div>
-        </div>
       </SocialConnectSection>
 
     

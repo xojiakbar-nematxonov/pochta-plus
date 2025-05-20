@@ -155,10 +155,7 @@ export default function BranchesPage() {
                   </div>
                   <div className="p-4">
                     <h3 className="font-semibold text-lg mb-2">{branch.name}</h3>
-                    <div className="flex items-center gap-2 mb-2">
-                      <div className={`w-3 h-3 rounded-full ${branch.isOpen ? "bg-green-500" : "bg-red-500"}`}></div>
-                      <span className="text-sm text-gray-600">Chiroqlar {branch.isOpen ? "on" : "off"}</span>
-                    </div>
+                    
                     <div className="flex items-start gap-2 mb-2">
                       <FiMapPin className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
                       <span className="text-gray-700">{branch.address}</span>

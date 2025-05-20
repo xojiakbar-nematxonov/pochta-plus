@@ -216,41 +216,7 @@ export default function PaymentServicesPage() {
         </div>
       </section>
 
-      {/* Payment Plans */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center">Bo'lib to'lash rejalarimiz</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {paymentPlans.map((plan, index) => (
-              <div
-                key={index}
-                className={`bg-white rounded-lg p-6 shadow-sm border-2 ${plan.badge ? "border-blue-600" : "border-gray-200"}`}
-              >
-                {plan.badge && (
-                  <div className="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full inline-block mb-4">
-                    {plan.badge}
-                  </div>
-                )}
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                  {plan.icon}
-                </div>
-                <h3 className="text-xl font-bold mb-2">{plan.title}</h3>
-                <p className="text-gray-600 mb-6">{plan.description}</p>
-                <Link
-                  href={`/payment-services/plans/${index + 1}`}
-                  className={`inline-block w-full text-center py-2 rounded-md font-medium ${
-                    plan.badge
-                      ? "bg-blue-600 hover:bg-blue-700 text-white"
-                      : "bg-gray-100 hover:bg-gray-200 text-gray-800"
-                  } transition-colors`}
-                >
-                  Tanlash
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+     
 
       {/* Benefits Section */}
       <section className="py-16 bg-gray-100">
