@@ -90,13 +90,17 @@ export default function ServicesPage() {
       title: "Mahalliy Yetkazib Berish",
       description: "Hududiy jo'natmalar tez va ishonchli yetkazish.",
     },
+    {
+      title: "Buyurtmali jo'natma",
+      description: "Bu xizmat turi orqali foydalanuvchi o'ziga qulay paytda jo'natmlarni qabul qila oladi",
+    },
   ]
 
   // Special services data
   const specialServices = [
     {
-      title: "Virtual pochta qutisi",
-      description: "Sizning pochta xabarlaringizni onlayn kuzatish imkoniyati.",
+      title: "Xalqaro obuna",
+      description: "Xalqaro gazeta va jurnallar uchun obuna.",
     },
     {
       title: "Sug'urta xizmati",
@@ -108,11 +112,11 @@ export default function ServicesPage() {
     },
     {
       title: "Pochta abonamenti",
-      description: "Doimiy mijozlar uchun maxsus pochta xizmatlari.",
+      description: "Doimiy mijozlar uchun maxsus chegirma va takliflar.",
     },
     {
       title: "Pochta bank xizmatlari",
-      description: "To'lovlar va moliyaviy operatsiyalarni pochta orqali amalga oshirish.",
+      description: "To'lovlar va moliyaviy operatsiyalarni smart post orqali amalga oshirish.",
     },
     {
       title: "Maxsus qadoqlash",
