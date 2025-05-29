@@ -11,6 +11,7 @@ export default function MarketplacePage() {
     { name: "Oziq-ovqat", icon: <FiTag className="w-4 h-4" /> },
     { name: "Go'zallik", icon: <FiTag className="w-4 h-4" /> },
     { name: "Sport", icon: <FiTag className="w-4 h-4" /> },
+    { name: "Hunarmandchilik buyumlari", icon: <FiTag className="w-4 h-4" /> },
   ]
 
   // International stores data
