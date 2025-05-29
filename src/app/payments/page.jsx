@@ -7,8 +7,8 @@ export default function PaymentServicesPage() {
   // Payment methods
   const paymentMethods = [
     {
-      title: "SPM Card",
-      description: "Bo'lib to'lash imkoniyati bilan xaridlar",
+      title: "Xalqaro Pul o'tkazmalari",
+      description: "Smart Post orqali tezkor, ishonchli pul o'tkazmalari",
       icon: <FiCreditCard className="w-8 h-8 text-blue-600" />,
       link: "/payment-services/spm-card",
     },
